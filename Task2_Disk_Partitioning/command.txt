@@ -1,0 +1,9 @@
+lsblk
+sudo fdisk /dev/nvme1n1
+m for help
+n for new partition
+Partition number (1-4, default 1): 1
+First sector (2048-41943039, default 2048): 
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-41943039, default 41943039): +10G
+w for saving and exit.
+lsblk
