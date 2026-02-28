@@ -1,0 +1,4 @@
+1. sudo apt update
+2. sudo apt install nginx
+3. git clone https://github.com/AYUSH18832/codelab0.1.git
+4. sudo cp -r . /var/www/html
