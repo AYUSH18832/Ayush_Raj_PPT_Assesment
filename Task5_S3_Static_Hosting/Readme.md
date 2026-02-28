@@ -66,11 +66,6 @@ Go to Permissions → Bucket Policy and add:
 - Website loads successfully
 
 ---
-
-## Proof Required
-- Screenshot 1: S3 bucket with static hosting enabled
-- Screenshot 2: Website opened using S3 endpoint URL
-
 ---
 
 ## Learning Outcome
