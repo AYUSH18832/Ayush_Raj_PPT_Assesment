@@ -1,0 +1,7 @@
+ubuntu@ip-172-31-0-171:~$ curl -X POST https://riwtnfz57i.execute-api.us-east-1.amazonaws.com/control \
+-H "Content-Type: application/json" \
+-d '{"action":"start"}'
+ubuntu@ip-172-31-0-171:~$ curl -X POST https://riwtnfz57i.execute-api.us-east-1.amazonaws.com/control \i.us-east-1.amazonaws.com/control \
+-H "Content-Type: application/json" \
+-d '{"action":"stop"}'
+"EC2 instance stopped successfully"

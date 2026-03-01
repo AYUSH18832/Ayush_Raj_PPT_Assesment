@@ -1,0 +1,10 @@
+sudo apt update 
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo apt install unzip
+unzip awscliv2.zip 
+sudo ./aws/install
+aws --version
+aws s3 ls
+echo "Hello from EC2 IAM Role" > test.txt
+aws s3 cp test.txt s3://ec2tos3task9/
+aws s3 ls  s3://ec2tos3task9/

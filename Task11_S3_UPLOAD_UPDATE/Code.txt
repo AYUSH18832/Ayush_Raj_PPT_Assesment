@@ -1,0 +1,31 @@
+import json
+import boto3
+
+sns = boto3.client('sns')
+TOPIC_ARN = 'arn:aws:sns:us-east-1:200642811988:Email'
+
+def lambda_handler(event, context):
+    records = event.get('Records', [])
+    
+    messages = []
+    for record in records:
+        event_name = record['eventName']
+        bucket = record['s3']['bucket']['name']
+        object_key = record['s3']['object']['key']
+        
+        msg = f"Event: {event_name}\nBucket: {bucket}\nObject: {object_key}"
+        messages.append(msg)
+    
+    final_message = "\n\n".join(messages)
+
+    # Publish to SNS
+    sns.publish(
+        TopicArn=TOPIC_ARN,
+        Subject='S3 Event Notification',
+        Message=final_message
+    )
+
+    return {
+        'statusCode': 200,
+        'body': final_message
+    }
